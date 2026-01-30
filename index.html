@@ -89,7 +89,7 @@
         
         try {
             // 采用二进制流方式读取，解决 GBK 乱码
-            const response = await fetch(`http://localhost:3000/q=${codes}`);
+            const response = await fetch(`https://fundash.onrender.com/q=${codes}`);
             const buffer = await response.arrayBuffer();
             const decoder = new TextDecoder('gbk');
             const txt = decoder.decode(buffer);
