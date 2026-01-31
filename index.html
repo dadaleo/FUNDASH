@@ -93,7 +93,7 @@
         const codes = myFunds.map(f => (f.c.startsWith('5') || f.c.startsWith('6') ? 'sh' : 'sz') + f.c).join(',') + ',sh000001';
         
         try {
-            const response = await fetch(`http://localhost:3000/q=${codes}`);
+            const response = await fetch(`https://fundash.onrender.com/q=${codes}`);
             const buffer = await response.arrayBuffer();
             const decoder = new TextDecoder('gbk');
             const txt = decoder.decode(buffer);
